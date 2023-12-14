@@ -1,0 +1,20 @@
+{
+  "name": "odata2test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen-odata": "odata2ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@odata2ts/http-client-fetch": "^0.6.2",
+    "@odata2ts/odata-service": "^0.17.1"
+  },
+  "devDependencies": {
+    "@odata2ts/odata2ts": "^0.31.1",
+    "typescript": "^5.3.3"
+  }
+}

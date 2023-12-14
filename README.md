@@ -36,11 +36,7 @@ Error while running the program: Error: Key property is missing from Entity "Emp
 **Steps to Reproduce:**
 1. Create or get a odata schema with entity types that are abstract or open type and has no keys
 2. Run `odata2ts` as you would normally do
-3. You will get an error because i.e. the abstract entity type did not have a key.
-
+3. You will get an error because i.e. the abstract entity type did not have a key
+   
 **Additional Context:**
-
-
----
-
-This issue report outlines the problem, provides references to the relevant documentation, and asks for a solution that adheres to the OData V4 specifications. Make sure to replace `[describe the specific issue or error message]` and `[List the steps to reproduce your issue]` with the specific details of your issue and steps you took when you encountered the problem.
+I created a repo reproducing the issue here: https://github.com/erik-kers/odata2ts-error-reproduction
