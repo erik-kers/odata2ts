@@ -15,17 +15,22 @@ According to the OData V4 specification, these entities do not require keys. The
 When trying to work with these entities using `odata2ts`, I am facing:
 
 ```bash
-Error while running the program: Error: Key property is missing from Entity "EmptyBaseEntity" (EmptyBaseEntity)!
-    at [local filepath]\node_modules\@odata2ts\odata2ts\lib\data-model\DataModelDigestion.js:229:23
+Loaded config file:  odata2ts.config.ts
+---------------------------
+Starting generation process
+Found metadata file at:  resource/keyless.xml
+Reading metadata from file: resource/keyless.xml
+Error while running the program Error: Key property is missing from Entity "AbstractBaseEntity" (AbstractBaseEntity)!
+    at C:\Users\erik.kers\repositories\Privat\odata2ts-error-reproduction\node_modules\@odata2ts\odata2ts\lib\data-model\DataModelDigestion.js:229:23
     at Array.forEach (<anonymous>)
-    at DigesterV4.postProcessModel ([local filepath]\node_modules\@odata2ts\odata2ts\lib\data-model\DataModelDigestion.js:218:20)
-    at DigesterV4.digestEntityTypesAndOperations ([local filepath]\node_modules\@odata2ts\odata2ts\lib\data-model\DataModelDigestion.js:137:14)
-    at DigesterV4.<anonymous> ([local filepath]\node_modules\@odata2ts\odata2ts\lib\data-model\DataModelDigestion.js:106:18)
+    at DigesterV4.postProcessModel (C:\Users\erik.kers\repositories\Privat\odata2ts-error-reproduction\node_modules\@odata2ts\odata2ts\lib\data-model\DataModelDigestion.js:218:20)
+    at DigesterV4.digestEntityTypesAndOperations (C:\Users\erik.kers\repositories\Privat\odata2ts-error-reproduction\node_modules\@odata2ts\odata2ts\lib\data-model\DataModelDigestion.js:137:14)
+    at DigesterV4.<anonymous> (C:\Users\erik.kers\repositories\Privat\odata2ts-error-reproduction\node_modules\@odata2ts\odata2ts\lib\data-model\DataModelDigestion.js:106:18)
     at Generator.next (<anonymous>)
-    at [local filepath]\node_modules\tslib\tslib.js:169:75
+    at C:\Users\erik.kers\repositories\Privat\odata2ts-error-reproduction\node_modules\tslib\tslib.js:169:75
     at new Promise (<anonymous>)
-    at Object.__awaiter ([local filepath]\node_modules\tslib\tslib.js:165:16)
-    at DigesterV4.digest ([local filepath]\node_modules\@odata2ts\odata2ts\lib\data-model\DataModelDigestion.js:105:24)
+    at Object.__awaiter (C:\Users\erik.kers\repositories\Privat\odata2ts-error-reproduction\node_modules\tslib\tslib.js:165:16)
+    at DigesterV4.digest (C:\Users\erik.kers\repositories\Privat\odata2ts-error-reproduction\node_modules\@odata2ts\odata2ts\lib\data-model\DataModelDigestion.js:105:24)
 ```
 
  "Error while running the program Error: Key property is missing from Entity "EmptyBaseEntity" (EmptyBaseEntity)!". This seems to stem from the library's handling (or lack thereof) of keyless entities, particularly in the context of abstract and open types.
