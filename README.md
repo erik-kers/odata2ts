@@ -1,5 +1,3 @@
-### Issue with Handling Keyless Entities in Microsoft Dynamics OData V4 API
-
 **Description:**
 I am using `odata2ts` to interact with the Microsoft Dynamics API, which is based on OData V4. This API includes certain keyless entities, particularly some that are abstract and others that are open types. However, I'm encountering issues with these specific entities. The entities in question are:
 
@@ -35,8 +33,11 @@ Error while running the program Error: Key property is missing from Entity "Abst
 
  "Error while running the program Error: Key property is missing from Entity "EmptyBaseEntity" (EmptyBaseEntity)!". This seems to stem from the library's handling (or lack thereof) of keyless entities, particularly in the context of abstract and open types.
 
-**Expected Behavior:**
-`odata2ts` should be able to handle keyless entities, including abstract and open types, as per the OData V4 specification. It should allow querying and manipulation of these entities without requiring a defined key.
+**Question:**
+Can `odata2ts` be able to handle keyless entities, including abstract and open types, as per the OData V4 specification?
+Reading the documentation I haven't found a solution for my problem. I have tried, hackily, to assign both keys and properties to these types of entities in the postProcess-stage. It has worked up until odata2ts tries to generate the odata service. But the "solution" felt quite hacky.
+
+I'm quite new to odata so I might also have misunderstood something, in that case I'm sorry.
 
 **Steps to Reproduce:**
 1. Create or get a odata schema with entity types that are abstract or open type and has no keys
